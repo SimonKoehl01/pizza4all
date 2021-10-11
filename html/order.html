@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../js/checkout.js" charset="utf-8"></script>
+  <title>Pizza 4 all</title>
+</head>
+
+
+<body>
+  <div class="mainView">
+    <div class="logoContainer">
+      <img src="../assets/LogoSample_ByTailorBrands.jpeg" alt="Pizza4All" class="logo">
+    </div>
+    <div class="navbarContainer">
+      <div class="navbar">
+        <a href="menu.html" class="navbarItem">Menu</a>
+        <a href="yourorders.html" class="navbarItem">Your orders</a>
+        <a href="index.html" class="navbarItem">Home</a>
+      </div>
+    </div>
+  </div>
+  <div class="contentView">
+    <div class="contentContainer" id="contentContainer">
+      <div class="contentList" id="contentList">
+
+      </div>
+    </div>
+    <div class="contentContainer" id="Customer_info_panel">
+      <form class="customer_info" action="javascript:;" onsubmit="postOrder(this)" method="post">
+        <div class="table">
+          <div class="column">
+            <label for="firstName">First Name*</label>
+            <input type="text" name=firstName value="" required>
+
+            <label for="email">E-Mail*</label>
+            <input type="email" name="email-address" value="" required>
+
+            <label for="street">Street*</label>
+            <input type="text" name="street" value="" required>
+          </div>
+          <div class="column">
+            <label for="lastName">Last Name*</label>
+            <input type="text" name="lastName" value="" required>
+
+            <label for="phone">Phone number*</label>
+            <input type="tel" name="phone" value="" required>
+
+            <label for="zipCode">Zip-Code*</label>
+            <input type="text" name="zipCode" value="" required>
+          </div>
+        </div>
+
+        <label for="discount_code">If you have a discount code you can enter it below!</label>
+        <input type="text" name="discount_code" value="">
+
+        <input type="submit" name="submit" value="Submit!" class="cartButton">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

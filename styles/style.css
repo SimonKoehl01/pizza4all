@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+
+body {
+  background: url("../assets/pizza_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.mainView {
+  backdrop-filter: blur(1rem);
+}
+.logoContainer{
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 1rem 0;
+}
+.logo {
+  border-radius: 25%;
+  width: 7rem;
+  object-fit: cover;
+}
+.navbarContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #C70039;
+  border-style: solid;
+  border-radius: 10rem;
+  border-color: #900C35;
+  border-width: 0.4rem;
+  box-shadow: 0.3rem 0.4rem 0.7rem grey;
+}
+.navbarItem {
+  font-size: 1.7rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  text-decoration: none;
+  color: white;
+  border-style: solid;
+  border-radius: 10rem;
+  border-color: #C70039;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.navbarItem:hover {
+  border-color: #900C35;
+  background-color: #FF5733;
+}
+
+.contentView {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contentContainer {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-style: solid;
+  border-width: 0.25rem;
+  border-radius: 0.4rem;
+  border-color: #FFC300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.content {
+  margin: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.menuItemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid grey;
+}
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 0 0.7rem 0;
+  margin-bottom: 1rem;
+}
+.menuItemHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rem 0 1rem 0;
+}
+.menuText {
+  padding-right: 1rem;
+  font-size: 1.7rem;
+}
+.menuDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cartButton {
+  font-size: 1.7rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  text-decoration: none;
+  color: black;
+  border-style: solid;
+  border-radius: 17%;
+  border-color: #C70039;
+  box-shadow: 0.1rem 0.1rem 0.3rem grey;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.cartButton:hover {
+  border-color: #900C35;
+  background-color: #FF5733;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.shoppingCartContainer {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.shoppingCart {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-style: solid;
+  border-width: 0.25rem;
+  border-radius: 0.4rem;
+  border-color: #FFC300;
+}
+#showCartButton {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+#showCartButton:hover + .shoppingCartContainer{
+  opacity: 1;
+  display: flex;
+}
+.shoppingCartContainer:last-child {
+  order: -1;
+}
+.quantityButton {
+  width: 3rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
+}
+.menuItemDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid grey;
+}
+.checkOutListContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.contentListDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.totalDiv {
+  font-size: 2rem;
+  padding: 1rem 0rem 1rem 0rem;
+  margin-top: 1rem;
+  text-align: right;
+}
+.totalDiv p {
+  margin-right: 1rem;
+}
+.contentContainer form {
+  font-size: 1.4rem;
+}
+.contentContainer input {
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+.contentContainer label {
+  margin: 0.5rem;
+  margin-bottom: 0rem;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.table {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid grey;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.info {
+  padding: 1rem;
+}
+.submitButton {
+  font-size: 1.4rem;
+  padding: 0.3rem;
+  margin: 0.5rem;
+}
+.text-left {
+  text-align: left;
+}

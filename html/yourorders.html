@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../js/orderStatus.js" charset="utf-8"></script>
+  <title>Pizza 4 all</title>
+</head>
+
+
+<body>
+  <div class="mainView">
+    <div class="logoContainer">
+      <img src="../assets/LogoSample_ByTailorBrands.jpeg" alt="Pizza4All" class="logo">
+    </div>
+    <div class="navbarContainer">
+      <div class="navbar">
+        <a href="menu.html" class="navbarItem">Menu</a>
+        <a href="yourorders.html" class="navbarItem">Your orders</a>
+        <a href="index.html" class="navbarItem">Home</a>
+      </div>
+    </div>
+  </div>
+  <div class="contentView">
+    <div class="contentContainer">
+      <form class="order_status_form" action="javascript:;" onsubmit="getOrderStatus(this)" method="post">
+        <label for="orderId">Please provide us with the id of the order you want to check!</label>
+        <input type="text" name="orderId" value="" required>
+        <input type="submit" name="submitOrderStatusCheck" value="Submit" class="cartButton submitButton">
+        <button type="button" name="cancelOrderButton" class="cartButton submitButton" onclick="cancelOrder(this.form[0].value)">Cancel order</button>
+      </form>
+    </div>
+    <div class="contentContainer" style="display:none;" id="contentContainer">
+
+    </div>
+  </div>
+</body>
+</html>
