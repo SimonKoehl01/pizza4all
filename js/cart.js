@@ -12,7 +12,7 @@ function addToCart(e) {
   sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 function checkOut() {
-    window.location.replace("http://localhost/html/order.html");
+    window.location.replace("order.html");
 }
 
 function parseCartHTML(menuData) {
