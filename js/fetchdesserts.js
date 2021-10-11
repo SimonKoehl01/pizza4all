@@ -2,7 +2,7 @@ data = null;
 window.onload = function fetch() {
   //Create XHR object
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://13.80.175.39:5000/menu/side_item/Dessert", true);
+  xhr.open("GET", "https://13.80.175.39:5000/menu/side_item/Dessert", true);
   xhr.onload = function() {
     if(this.status == "200") {
       data = JSON.parse(this.responseText);
