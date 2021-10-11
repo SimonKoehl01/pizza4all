@@ -2,7 +2,7 @@ function getOrderStatus(form) {
   var order_id = form[0].value;
   var xhr = new XMLHttpRequest();
   //Get status
-  xhr.open("GET", "http://localhost:5000/order/get_status/" + parseInt(order_id), true);
+  xhr.open("GET", "http://13.80.175.39:5000/order/get_status/" + parseInt(order_id), true);
   xhr.onload = function() {
     if(this.status == "200") {
       data = JSON.parse(this.responseText);
@@ -32,7 +32,7 @@ function parseStatusHTML(data) {
 }
 function cancelOrder(order_id) {
 
-  fetch("http://localhost:5000/cancel_order/" + parseInt(order_id))
+  fetch("http://13.80.175.39:5000/cancel_order/" + parseInt(order_id))
     .then(response => {
       if(response.status == 400) {
         response.json().then(data => alert(data.result));
