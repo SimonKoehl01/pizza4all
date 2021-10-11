@@ -2,7 +2,7 @@ function getOrderStatus(form) {
   var order_id = form[0].value;
   var xhr = new XMLHttpRequest();
   //Get status
-  xhr.open("GET", "http://13.80.175.39:5000/order/get_status/" + parseInt(order_id), true);
+  xhr.open("GET", "https://13.80.175.39:5000/order/get_status/" + parseInt(order_id), true);
   xhr.onload = function() {
     if(this.status == "200") {
       data = JSON.parse(this.responseText);
