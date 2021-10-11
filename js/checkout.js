@@ -104,7 +104,7 @@ function postOrder(form) {
   var result = document.querySelector('.result');
   // Creating a XHR object
   let xhr = new XMLHttpRequest();
-  let url = "http://13.80.175.39:5000/order";
+  let url = "https://13.80.175.39:5000/order";
   // open a connection
   xhr.open("POST", url, true);
   // Set the request header i.e. which type of content you are sending
