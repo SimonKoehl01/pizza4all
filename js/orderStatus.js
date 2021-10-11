@@ -32,7 +32,7 @@ function parseStatusHTML(data) {
 }
 function cancelOrder(order_id) {
 
-  fetch("http://13.80.175.39:5000/cancel_order/" + parseInt(order_id))
+  fetch("https://13.80.175.39:5000/cancel_order/" + parseInt(order_id))
     .then(response => {
       if(response.status == 400) {
         response.json().then(data => alert(data.result));
