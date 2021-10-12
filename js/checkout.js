@@ -46,11 +46,11 @@ function parseCheckoutListHTML(menuData) {
     quantityButton.type = "number";
     quantityButton.min = "1";
     quantityButton.value = "1";
-    quantityButton.id = i;
+    quantityButton.id = i + ";" + menuData[i].menu_id;
     quantityButton.classList.add("quantityButton");
     quantityButton.addEventListener('change', function(e) {
       totalPrice = 0;
-      multipliers[e.srcElement.id] = e.srcElement.value;
+      multipliers[e.srcElement.id.split(";")[0]] = e.srcElement.value;
       for(var j = 0; j < menuData.length; j++) {
         totalPrice += parseInt(multipliers[j]) * menuData[j].price;
       }
@@ -91,7 +91,7 @@ function postOrder(form) {
   var quantities = document.getElementsByClassName("quantityButton");
   var orderItems = [];
   for(var i = 0; i < quantities.length; i++) {
-    orderItems.push(new OrderItem(quantities[i].id, quantities[i].value));
+    orderItems.push(new OrderItem(quantities[i].id.split(";")[1], quantities[i].value));
   }
   var discountCode = form[form.length-1];
   var order = new Order(c, orderItems);
