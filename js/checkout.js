@@ -46,7 +46,7 @@ function parseCheckoutListHTML(menuData) {
     quantityButton.type = "number";
     quantityButton.min = "1";
     quantityButton.value = "1";
-    quantityButton.id = menuData[i].menu_id-1;
+    quantityButton.id = i;
     quantityButton.classList.add("quantityButton");
     quantityButton.addEventListener('change', function(e) {
       totalPrice = 0;
